@@ -18,12 +18,20 @@ def contact(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
-        
-        # Add your email handling logic here
-        # For now, we'll just show a success message
-        messages.success(request, 'Thank you for your message! I will get back to you soon.')
+
+        # Email sending logic
+        subject = f'New message from {name} ({email})'
+        full_message = f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}'
+        recipient_list = ['abhi22chavan@gmail.com']  # Replace with your recipient email
+
+        try:
+            send_mail(subject, full_message, email, recipient_list, fail_silently=False)
+            messages.success(request, 'Thank you for your message! I will get back to you soon.')
+        except Exception as e:
+            messages.error(request, f'There was an error sending your message: {e}')
+
         return redirect('contact')
-        
+
     return render(request, 'main/contact.html')
 
 def certifications(request):
