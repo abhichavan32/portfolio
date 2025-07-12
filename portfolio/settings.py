@@ -1,4 +1,28 @@
 import os  # Add this at the top of the file
+# settings.py
+
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Important for collectstatic
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Your app's static/ folder
+]
+
+# Whitenoise Middleware (add it BEFORE Django's CommonMiddleware)
+MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    ...
+]
+
+# Enable compression
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 """
 Django settings for portfolio project.
@@ -15,7 +39,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +51,9 @@ SECRET_KEY = 'django-insecure-+3ptk5&jzy5o_^rvmpq((zg+d63!832n-*)o#9b9koa@jy(75g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']  # Not secure for production
+
+ALLOWED_HOSTS = ['portfolio-1-qpn4.onrender.com']
+
 
 
 
