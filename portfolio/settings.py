@@ -61,6 +61,8 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['portfolio-1-qpn4.onrender.com']
+ALLOWED_HOSTS = ["*"]
+
 
 
 
