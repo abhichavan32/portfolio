@@ -1,2 +1,0 @@
-python manage.py runserver
-c:\Users\acer\OneDrive\Desktop\django\venv\Scripts\activate
