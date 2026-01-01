@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.contrib import messages
+from django.conf import settings
 from .models import Certificate
 from django.contrib.auth.decorators import login_required
 
@@ -25,7 +26,7 @@ def contact(request):
         recipient_list = ['abhi22chavan@gmail.com']  # Replace with your recipient email
 
         try:
-            send_mail(subject, full_message, email, recipient_list, fail_silently=False)
+            send_mail(subject, full_message, settings.EMAIL_HOST_USER, recipient_list, fail_silently=False)
             messages.success(request, 'Thank you for your message! I will get back to you soon.')
         except Exception as e:
             messages.error(request, f'There was an error sending your message: {e}')
