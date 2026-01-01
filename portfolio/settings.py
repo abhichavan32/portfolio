@@ -102,7 +102,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'abhi22chavan@gmail.com'  # Replace with your email
-EMAIL_HOST_PASSWORD = 'mziw tshn kqjk loxv'  
+EMAIL_HOST_PASSWORD = 'zwag ykte akvh hpnh'  
 DEFAULT_FROM_EMAIL = 'abhi22chavan@gmail.com' # Replace with your email
 
 # Default primary key field type
