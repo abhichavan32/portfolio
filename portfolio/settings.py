@@ -7,8 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-+3ptk5&jzy5o_^rvmpq((zg+d63!832n-*)o#9b9koa@jy(75g'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['portfolio-1-qpn4.onrender.com', 'localhost', '127.0.0.1']
@@ -105,7 +104,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'abhi22chavan@gmail.com'  # Replace with your email
-EMAIL_HOST_PASSWORD = 'mziwtshnkqjkloxv'  
+EMAIL_HOST_PASSWORD = 'xutf rlzq ctiz qfrn'  
 DEFAULT_FROM_EMAIL = 'abhi22chavan@gmail.com' # Replace with your email
 
 # Default primary key field type
